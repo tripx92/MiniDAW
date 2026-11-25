@@ -131,7 +131,9 @@ class TrackUi {
 
 class DawState {
     var playing by mutableStateOf(false)
-    var bpm by mutableFloatStateOf(120f)
+        var bpm by mutableFloatStateOf(120f)
+        private set
+
     var position by mutableStateOf("001.1.1")
     var metronome by mutableStateOf(false)
     var quantIdx by mutableIntStateOf(3)
