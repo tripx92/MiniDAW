@@ -180,8 +180,9 @@ class DawState {
         val i = idx(t, s)
         NativeEngine.nativeSetClipParams(t, s, if (warp[i]) 1 else 0, bars[i], transpose[i])
     }
-
+        @JvmName("applyBpm")
     fun setBpm(v: Float) {
+
         bpm = v.coerceIn(60f, 200f)
         NativeEngine.nativeSetGlobal(NativeEngine.GP_BPM, bpm)
     }
